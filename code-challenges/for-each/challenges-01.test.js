@@ -1,7 +1,5 @@
 'use strict';
 
-import { isModuleDeclaration } from "@babel/types";
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -58,16 +56,19 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  for (let i = 0; i< arr.length; i++){
-    if ((num%3) === 2){
-      arr[i].pop();
-    }
+
+  if ((num%3) === 2){
+    arr.pop();
   }
+
   return arr;
 };
 
 const removeElements = (arr, callback) => {
-  arr.forEach(callback(i, arr));
+  for (let i = 0; i < arr.length; i++){
+    callback(arr[i], arr);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
