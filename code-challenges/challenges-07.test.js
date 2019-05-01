@@ -13,7 +13,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   let newArray = [];
   for (let element of arr ){
-    newArray.push(2 ^ element);
+    newArray.push(Math.pow(2, element));
   }
   return newArray;
 };
