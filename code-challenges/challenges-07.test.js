@@ -39,7 +39,10 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  let mapped = arr.map( number => {
+    return Math.pow(2, number);
+  });
+  return mapped;
 };
 
 /* ------------------------------------------------------------------------------------------------
