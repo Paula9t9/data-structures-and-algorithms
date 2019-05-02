@@ -27,7 +27,9 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  return arr.filter(string => {
+    return (string.includes('a') || string.includes('e') || string.includes('i') ||string.includes('o') || string.includes('u'));
+  });
 };
 
 
