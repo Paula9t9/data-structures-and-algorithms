@@ -197,7 +197,14 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce((ansSoFar, currentValue) => {
+    console.log(`andSoFar: ${ansSoFar}`);
+    if(isPrime(currentValue)){
+      return ansSoFar += 1;
+    } else {
+      return ansSoFar;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
