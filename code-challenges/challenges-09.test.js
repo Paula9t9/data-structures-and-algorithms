@@ -17,7 +17,7 @@ const countNumberOfElements = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named returnNames that, given the Star Wars data, below, uses reduce to return an array containing the names of the characters.
+Write a function named returnNames that, given the Star Wars data below, uses reduce to return an array containing the names of the characters.
 ------------------------------------------------------------------------------------------------ */
 
 let starWarsData = [{
@@ -71,7 +71,10 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((ansSoFar, currentValue) => {
+    ansSoFar.push(currentValue.name);
+    return ansSoFar;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
