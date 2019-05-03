@@ -148,7 +148,17 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((ansSoFar, currentValue) => {
+    if (currentValue.hasOwnProperty('children')){
+      let thisChildCount = 0;
+      currentValue.children.forEach(()=> {
+        thisChildCount++;
+      });
+      return ansSoFar += thisChildCount;
+    } else {
+      return ansSoFar;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
