@@ -170,7 +170,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let finalTally = arr.reduce((ansSoFar, currentValue) => {
+    ansSoFar.count ++;
+    ansSoFar.sum+= currentValue;
+    return ansSoFar;
+  }, {count: 0, sum: 0});
+
+  return (finalTally.sum / finalTally.count);
 };
 
 /* ------------------------------------------------------------------------------------------------
