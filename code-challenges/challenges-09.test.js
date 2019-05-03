@@ -86,10 +86,16 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  return arr.reduce((ansSoFar, currentValue) => {
-    ansSoFar.push(currentValue.pop());
+  let realArray = arr.split('');
+
+  let newArray = realArray.reduce((ansSoFar, currentValue) => {
+    console.log(`currentValue: ${currentValue}`);
+    ansSoFar.unshift(currentValue);
+    console.log(`ansSoFar ${ansSoFar}`);
     return ansSoFar;
   }, []);
+
+  return newArray.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
