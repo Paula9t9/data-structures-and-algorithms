@@ -56,7 +56,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let phoneRegex = /^\d{7,10}$|^\W\d{3}\W\s\d{3}\W\d{4}$|^\d{3}(\s|\W)\d{3}(\W|\s)\d{4}$|^\d{3}\s\d{7}$/;
+  return phoneRegex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
