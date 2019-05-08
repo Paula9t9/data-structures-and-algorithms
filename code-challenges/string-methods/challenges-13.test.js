@@ -12,7 +12,6 @@ const firstLetters = (arr) => {
   let letterRegex = /^./;
   return arr.reduce((ansSoFar, currentString) => {
     let foundString = currentString.match(letterRegex)[0];
-    console.log(foundString);
     ansSoFar.push(foundString);
     return ansSoFar;
   }, []);
@@ -108,7 +107,7 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   return arr.every( string => {
-    return string === target;
+    return string.includes(target);
   });
 };
 
