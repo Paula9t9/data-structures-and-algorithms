@@ -9,7 +9,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  let letterRegex = /^./;
+  return arr.reduce((ansSoFar, currentString) => {
+    let foundString = currentString.match(letterRegex)[0];
+    console.log(foundString);
+    ansSoFar.push(foundString);
+    return ansSoFar;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +27,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  let smileyRegex = /:\)/;
+
+  return arr.filter( string => {
+    return smileyRegex.test(string);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
