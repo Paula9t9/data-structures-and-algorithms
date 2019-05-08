@@ -174,7 +174,20 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  
+  return weather.reduce( (ansSoFar, currentWeek) => {
+
+    let thisWeekTotal = currentWeek.reduce((innerAnsSoFar, dayTemp) => {
+      return innerAnsSoFar += dayTemp;
+    }, 0);
+    let thisWeekAvg = thisWeekTotal / currentWeek.length;
+    if(ansSoFar > thisWeekAvg){
+      return ansSoFar = thisWeekAvg;
+    }else {
+      return ansSoFar;
+    }
+
+  }, 100);
 };
 
 /* ------------------------------------------------------------------------------------------------
