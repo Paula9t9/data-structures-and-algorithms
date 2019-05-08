@@ -140,7 +140,20 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+
+  let totalTemps = weather.reduce((TotalAnsSoFar, currentWeek) => {
+
+
+    let weekTemps = currentWeek.reduce((weekAnsSoFar, currentDayTemp) => {
+      return weekAnsSoFar += currentDayTemp;
+    }, 0);
+
+
+    return TotalAnsSoFar += weekTemps / currentWeek.length;
+
+  }, 0);
+  return totalTemps / weather.length;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
