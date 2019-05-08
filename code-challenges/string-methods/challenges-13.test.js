@@ -43,7 +43,11 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  let digitRegex = /(?!\d)./g;
+
+  return arr.map(string => {
+    return string.replace(digitRegex, '');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +59,14 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+
+  let newString = '';
+  for (let i = 0; i < str.length; i++){
+    if (i%2){
+      newString += str.charAt(i);
+    }
+  }
+  return newString;
 };
 
 /* ------------------------------------------------------------------------------------------------
