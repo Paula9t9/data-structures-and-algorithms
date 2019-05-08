@@ -203,7 +203,25 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  
+  let rowArray = str.split('\n');
+  rowArray.forEach((row, index) => {
+    rowArray[index] = row.split(',');
+  });
+  console.log(rowArray);
+
+  let totalValue = rowArray.reduce((ansSoFar, currentRow) => {
+
+    let rowTotal = currentRow.reduce((innerAnsSoFar, currentNumber) => {
+      return innerAnsSoFar += currentNumber;
+    });
+
+    let rowAverage = rowTotal / currentRow.length;
+    console.log(`rowAverageL ${rowAverage}`);
+    return ansSoFar += rowAverage;
+  }, 0);
+
+  return totalValue / rowArray.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
