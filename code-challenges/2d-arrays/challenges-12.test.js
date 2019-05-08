@@ -203,7 +203,7 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  
+
   let rowArray = str.split('\n');
   rowArray.forEach((row, index) => {
     rowArray[index] = row.split(',');
