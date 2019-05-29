@@ -11,4 +11,10 @@ Tools like Math.ceil will not work unless you cast the ints to doubles, which is
 
 
 ##Solution
+
+[Link to code](../code401challenges/src/main/java/code401challenges/ArrayShift.java)
+
+[Link to tests](../code401challenges/src/test/java/code401challenges/ArrayShiftTest.java)
+
 ![alt text](./assets/ShiftArrayChallenge.jpg "A whiteboard drawing of the problem domain and pseudocode for this challenge")
+
