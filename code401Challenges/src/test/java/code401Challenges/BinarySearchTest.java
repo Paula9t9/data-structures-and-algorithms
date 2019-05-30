@@ -45,4 +45,16 @@ public class BinarySearchTest {
                 expectedResult, binarySearch.myBinarySearch(inputArray, findNumber));
 
     }
+
+    @Test
+    public void testBinarySearch_testNumberNotFound(){
+        BinarySearch binarySearch = new BinarySearch();
+        int[] inputArray = new int[]{1, 7, 9, 22, 31};
+        int findNumber = 14;
+        int expectedResult = -1;
+
+        assertEquals("Should return -1 if the answer is not found in the array",
+                expectedResult, binarySearch.myBinarySearch(inputArray, findNumber));
+
+    }
 }
