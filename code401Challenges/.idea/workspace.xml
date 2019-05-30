@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf72fdc-5da9-46b2-9514-f026e35df9da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/code401Challenges/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/code401Challenges/Library.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/code401Challenges/LibraryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -37,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/code401Challenges/BinarySearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -46,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="326">
+              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -86,8 +82,8 @@
         <option value="$PROJECT_DIR$/src/test/java/code401Challenges/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/code401Challenges/ArrayShiftTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/code401Challenges/ArrayShift.java" />
-        <option value="$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/code401Challenges/BinarySearch.java" />
+        <option value="$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java" />
       </list>
     </option>
   </component>
@@ -194,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTest.testBinarySearch_basicTest">
+  <component name="RunManager" selected="JUnit.BinarySearchTest">
     <configuration name="ArrayShiftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code401Challenges.test" />
       <extension name="coverage">
@@ -210,7 +206,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayShiftTest.testInsertShiftArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code401Challenges.test" />
       <extension name="coverage">
         <pattern>
@@ -219,25 +215,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="code401Challenges" />
-      <option name="MAIN_CLASS_NAME" value="code401Challenges.ArrayShiftTest" />
-      <option name="METHOD_NAME" value="testInsertShiftArray" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArrayShiftTest.testInsertShiftArray_OddLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code401Challenges.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code401Challenges.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="code401Challenges" />
-      <option name="MAIN_CLASS_NAME" value="code401Challenges.ArrayShiftTest" />
-      <option name="METHOD_NAME" value="testInsertShiftArray_OddLength" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="code401Challenges.BinarySearchTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,12 +237,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BinarySearchTest.testBinarySearch_testEvenArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code401Challenges.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="code401Challenges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="code401Challenges" />
+      <option name="MAIN_CLASS_NAME" value="code401Challenges.BinarySearchTest" />
+      <option name="METHOD_NAME" value="testBinarySearch_testEvenArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTest.testBinarySearch_testGapArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code401Challenges.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="code401Challenges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="code401Challenges" />
+      <option name="MAIN_CLASS_NAME" value="code401Challenges.BinarySearchTest" />
+      <option name="METHOD_NAME" value="testBinarySearch_testGapArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTest" />
+        <item itemvalue="JUnit.BinarySearchTest.testBinarySearch_testGapArray" />
+        <item itemvalue="JUnit.BinarySearchTest.testBinarySearch_testEvenArray" />
         <item itemvalue="JUnit.BinarySearchTest.testBinarySearch_basicTest" />
         <item itemvalue="JUnit.ArrayShiftTest" />
-        <item itemvalue="JUnit.ArrayShiftTest.testInsertShiftArray_OddLength" />
-        <item itemvalue="JUnit.ArrayShiftTest.testInsertShiftArray" />
       </list>
     </recent_temporary>
   </component>
@@ -281,12 +293,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayShiftTest_testInsertShiftArray - 2019.05.29 at 09h 15m 36s.xml">
-      <configuration name="ArrayShiftTest.testInsertShiftArray" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayShiftTest_testInsertShiftArray - 2019.05.29 at 09h 26m 38s.xml">
-      <configuration name="ArrayShiftTest.testInsertShiftArray" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArrayShiftTest_testInsertShiftArray_OddLength - 2019.05.29 at 09h 30m 40s.xml">
       <configuration name="ArrayShiftTest.testInsertShiftArray_OddLength" configurationId="JUnit" />
     </history-entry>
@@ -305,6 +311,18 @@
     <history-entry file="BinarySearchTest_testBinarySearch_basicTest - 2019.05.30 at 08h 39m 46s.xml">
       <configuration name="BinarySearchTest.testBinarySearch_basicTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BinarySearchTest_testBinarySearch_basicTest - 2019.05.30 at 09h 01m 44s.xml">
+      <configuration name="BinarySearchTest.testBinarySearch_basicTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinarySearchTest_testBinarySearch_testEvenArray - 2019.05.30 at 09h 10m 03s.xml">
+      <configuration name="BinarySearchTest.testBinarySearch_testEvenArray" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinarySearchTest_testBinarySearch_testGapArray - 2019.05.30 at 09h 12m 04s.xml">
+      <configuration name="BinarySearchTest.testBinarySearch_testGapArray" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BinarySearchTest - 2019.05.30 at 09h 12m 13s.xml">
+      <configuration name="BinarySearchTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="23" width="1161" height="783" extended-state="0" />
@@ -319,7 +337,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39942113" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -362,6 +380,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/code401Challenges/BinarySearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/code401Challenges/ArrayShiftTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -374,15 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/code401Challenges/BinarySearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/code401Challenges/BinarySearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="326">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
