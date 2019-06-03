@@ -39,8 +39,20 @@ public class LinkedList {
 
     }
 
-//    public boolean includes(int valueToFind){
-//
-//    }
+    public boolean includes(int valueToFind){
+
+        boolean found = false;
+        Node next = this.head;
+
+        while(next != null){
+            if(next.value == valueToFind){
+                found = true;
+                break;
+            }
+            next = next.nextNode;
+        }
+
+        return found;
+    }
 
 }

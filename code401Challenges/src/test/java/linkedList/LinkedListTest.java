@@ -50,4 +50,30 @@ public class LinkedListTest {
 
     }
 
+    @Test
+    public void testIncludes_true(){
+
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        assertTrue("Should return true when the item is in the list", testList.includes(7));
+
+    }
+
+    @Test
+    public void testIncludes_false(){
+
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        assertFalse("Should return false when the value is not in the list", testList.includes(4));
+
+    }
+
 }

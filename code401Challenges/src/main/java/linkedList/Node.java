@@ -17,16 +17,16 @@ public class Node {
         this.nextNode = nextNode;
     }
 
-    //override array list equals for proper comparison
+    //TODO: override array list equals for proper comparison
 //    @Override
-//    public boolean equals (Node thatNode){
-//
-//        if(this.value == thatNode.value){
-//            return true;
-//        }else {
-//            return false;
-//        }
-//    }
+////    public boolean equals (Node thatNode){
+////
+////        if(this.value == thatNode.value){
+////            return true;
+////        }else {
+////            return false;
+////        }
+////    }
 
 
 }
