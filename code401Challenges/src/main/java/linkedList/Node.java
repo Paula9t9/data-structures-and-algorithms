@@ -1,5 +1,7 @@
 package linkedList;
 
+import java.util.ArrayList;
+
 public class Node {
 
     int value;
@@ -14,6 +16,17 @@ public class Node {
         this.value = value;
         this.nextNode = nextNode;
     }
+
+    //override array list equals for proper comparison
+//    @Override
+//    public boolean equals (Node thatNode){
+//
+//        if(this.value == thatNode.value){
+//            return true;
+//        }else {
+//            return false;
+//        }
+//    }
 
 
 }

@@ -1,5 +1,7 @@
 package linkedList;
 
+import java.util.ArrayList;
+
 public class LinkedList {
 
     // I used this as a reference to figure out how to get the next memory address in Java.
@@ -21,6 +23,24 @@ public class LinkedList {
         }
     }
 
-    
+    public ArrayList<Node> print(){
+
+        ArrayList<Node> nodeArrayList = new ArrayList<>();
+
+        Node next = this.head;
+
+
+        while (next != null){
+            nodeArrayList.add(next);
+            next = next.nextNode;
+        }
+
+        return nodeArrayList;
+
+    }
+
+//    public boolean includes(int valueToFind){
+//
+//    }
 
 }
