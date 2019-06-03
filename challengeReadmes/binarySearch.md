@@ -20,5 +20,5 @@ From there, I would repeat the process until either the number was found, or I r
 
 [Link to Tests](../code401challenges/src/test/java/code401challenges/BinarySearchTest.java)
 
-![alt text](./assets/BinarySearchWhiteboard.jpg "A whiteboard drawing of the problem domain and pseudocode for this challenge")
+![whiteboard with binary solution](./assets/BinarySearchWhiteboard.jpg "A whiteboard drawing of the problem domain and pseudocode for this challenge")
 
