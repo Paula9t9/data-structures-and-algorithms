@@ -17,15 +17,20 @@ public class LinkedListTest {
         assertEquals("Returned node list should have the expected nodes",
                 2, list.print().get(0).value);
 
+        //Leaving print in for now to make sure we don't have more values than were added
+        // Goal is to eventually make a proper .equals override for comparing node ArrayLists
         ArrayList<Node> nodeList = list.print();
 
-        System.out.println("Values found in list: ");
+        System.out.println("Testing single insert. Should have one value." +
+                "\nValue found in list: ");
         for(Node node : nodeList){
             System.out.println(node.value);
         }
 
     }
 
+    // Tests that multiple values were properly added, and ensures that print properly returned an arrayList
+    // containing everything
     @Test
     public void testInsert_multipleAdd() {
         LinkedList list = new LinkedList();
@@ -41,17 +46,21 @@ public class LinkedListTest {
         assertEquals("Returned node list should have the expected values",
                 2, list.print().get(2).value);
 
+        //Leaving print in for now to make sure we don't have more values than were added
+        // goal is to eventually make a proper .equals override for comparing ArrayLists
         ArrayList<Node> nodeList = list.print();
 
-        System.out.println("Values found in list: ");
+        System.out.println("Testing Multiple inserts. Should have 3 values." +
+                "\nValues found in list: ");
         for(Node node : nodeList){
             System.out.println(node.value);
         }
 
     }
 
+
     @Test
-    public void testIncludes_true(){
+    public void testIncludes_basic(){
 
         LinkedList testList = new LinkedList();
         testList.insert(7);
@@ -60,11 +69,21 @@ public class LinkedListTest {
         testList.insert(3);
 
         assertTrue("Should return true when the item is in the list", testList.includes(7));
+        assertFalse("Should return false when the value is not in the list", testList.includes(4));
 
     }
 
+
+
     @Test
-    public void testIncludes_false(){
+    public void testEmptyList(){
+
+        LinkedList testList = new LinkedList();
+        assertEquals("List should instantiate as empty", null, testList.head);
+    }
+
+    @Test
+    public void testHead(){
 
         LinkedList testList = new LinkedList();
         testList.insert(7);
@@ -72,8 +91,15 @@ public class LinkedListTest {
         testList.insert(2);
         testList.insert(3);
 
-        assertFalse("Should return false when the value is not in the list", testList.includes(4));
+        // Don't forget: most recent add is inserted at front of list
+        assertEquals("Head should point to first item in the list",
+                3, testList.head.value);
 
     }
 
+
+
+
 }
+
+

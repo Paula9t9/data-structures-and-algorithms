@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf72fdc-5da9-46b2-9514-f026e35df9da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/linkedList/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/linkedList/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/linkedList/LinkedListTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -38,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/linkedList/LinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+            <state relative-caret-position="-916">
+              <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -184,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest.testIncludes_false">
+  <component name="RunManager" selected="JUnit.LinkedListTest">
     <configuration name="LinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code401Challenges.test" />
       <extension name="coverage">
@@ -196,6 +194,38 @@
       <option name="PACKAGE_NAME" value="linkedList" />
       <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListTest.testEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code401Challenges.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="linkedList" />
+      <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListTest" />
+      <option name="METHOD_NAME" value="testEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListTest.testHead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code401Challenges.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="linkedList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="linkedList" />
+      <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListTest" />
+      <option name="METHOD_NAME" value="testHead" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,45 +262,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.testInsert_multipleAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code401Challenges.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="linkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="linkedList" />
-      <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListTest" />
-      <option name="METHOD_NAME" value="testInsert_multipleAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListTest.testInsert_singleAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code401Challenges.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="linkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="linkedList" />
-      <option name="MAIN_CLASS_NAME" value="linkedList.LinkedListTest" />
-      <option name="METHOD_NAME" value="testInsert_singleAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedListTest" />
+        <item itemvalue="JUnit.LinkedListTest.testHead" />
+        <item itemvalue="JUnit.LinkedListTest.testEmptyList" />
         <item itemvalue="JUnit.LinkedListTest.testIncludes_false" />
         <item itemvalue="JUnit.LinkedListTest.testIncludes_true" />
-        <item itemvalue="JUnit.LinkedListTest" />
-        <item itemvalue="JUnit.LinkedListTest.testInsert_multipleAdd" />
-        <item itemvalue="JUnit.LinkedListTest.testInsert_singleAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -288,24 +286,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedListTest_testInsert_singleAdd - 2019.06.03 at 10h 31m 55s.xml">
-      <configuration name="LinkedListTest.testInsert_singleAdd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_testInsert_singleAdd - 2019.06.03 at 10h 33m 24s.xml">
-      <configuration name="LinkedListTest.testInsert_singleAdd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_testInsert_singleAdd - 2019.06.03 at 10h 33m 44s.xml">
-      <configuration name="LinkedListTest.testInsert_singleAdd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_testInsert_singleAdd - 2019.06.03 at 10h 37m 04s.xml">
-      <configuration name="LinkedListTest.testInsert_singleAdd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_testInsert_multipleAdd - 2019.06.03 at 10h 38m 29s.xml">
-      <configuration name="LinkedListTest.testInsert_multipleAdd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_testInsert_multipleAdd - 2019.06.03 at 10h 38m 52s.xml">
-      <configuration name="LinkedListTest.testInsert_multipleAdd" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedListTest - 2019.06.03 at 10h 39m 22s.xml">
       <configuration name="LinkedListTest" configurationId="JUnit" />
     </history-entry>
@@ -317,6 +297,24 @@
     </history-entry>
     <history-entry file="LinkedListTest_testIncludes_false - 2019.06.03 at 10h 50m 00s.xml">
       <configuration name="LinkedListTest.testIncludes_false" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_testIncludes_false - 2019.06.03 at 10h 50m 17s.xml">
+      <configuration name="LinkedListTest.testIncludes_false" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_testEmptyList - 2019.06.03 at 10h 52m 30s.xml">
+      <configuration name="LinkedListTest.testEmptyList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_testHead - 2019.06.03 at 11h 01m 42s.xml">
+      <configuration name="LinkedListTest.testHead" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest - 2019.06.03 at 11h 02m 02s.xml">
+      <configuration name="LinkedListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest - 2019.06.03 at 11h 03m 29s.xml">
+      <configuration name="LinkedListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest - 2019.06.03 at 11h 04m 17s.xml">
+      <configuration name="LinkedListTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -406,8 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/linkedList/LinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        <state relative-caret-position="-916">
+          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
         </state>
       </provider>
     </entry>
