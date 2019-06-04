@@ -10,6 +10,7 @@ public class LinkedList {
     Node head = null;
 
 
+    // inserts a new node at the front of the list
     public void insert(int value) {
 
         //If no head, instantiate head and add first value
@@ -23,6 +24,42 @@ public class LinkedList {
         }
     }
 
+    // inserts a new node between the prevNode and the nextNode.
+    public void insert(int value, Node nextNode, Node prevNode) {
+
+        //if nextNode is null, add to the end of the list
+        if(nextNode == null){
+            Node newNode = new Node(value);
+            prevNode.nextNode = newNode;
+        }else {
+            Node newNode = new Node(value, nextNode);
+            prevNode.nextNode = newNode;
+        }
+
+    }
+
+
+    // finds first occurrence of a value in the list and inserts the new value before that value
+    // if value not found, insert at the front of the list
+    public void insertBefore(int valueToFind, int valueToInsert){
+
+        if(this.includes(valueToFind)){
+
+            Node currentNode = this.head;
+
+            while(currentNode != null){
+                if( currentNode.nextNode.value == valueToFind){
+                    insert(valueToInsert, currentNode.nextNode, currentNode);
+                    break;
+                }
+            }
+        }else {
+            insert(valueToInsert);
+        }
+    }
+
+
+    // Returns an arrayList of all the items in a list
     public ArrayList<Node> print(){
 
         ArrayList<Node> nodeArrayList = new ArrayList<>();
@@ -39,6 +76,8 @@ public class LinkedList {
 
     }
 
+
+    //Checks to see if a value is in the list
     public boolean includes(int valueToFind){
 
         boolean found = false;
