@@ -84,7 +84,7 @@ public class LinkedList {
 
             while (currentNode != null) {
                 if(currentNode.value == valueToFind){
-                    insert(valueToFind, currentNode.nextNode, currentNode);
+                    insert(valueToInsert, currentNode.nextNode, currentNode);
                     break;
                 }
                 currentNode = currentNode.nextNode;

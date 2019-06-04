@@ -158,7 +158,7 @@ public class LinkedListTest {
         int valueToFind = 8;
         int valueToInsert = 4;
 
-        testList.insertBefore(valueToFind, valueToInsert);
+        testList.insertAfter(valueToFind, valueToInsert);
         ArrayList<Node> actualResult = testList.getListOfNodes();
 
         LinkedList expectedList = new LinkedList();
