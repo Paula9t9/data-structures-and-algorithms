@@ -15,11 +15,11 @@ public class LinkedListTest {
         list.insert(2);
 
         assertEquals("Returned node list should have the expected nodes",
-                2, list.print().get(0).value);
+                2, list.getListOfNodes().get(0).value);
 
         //Leaving print in for now to make sure we don't have more values than were added
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists
-        ArrayList<Node> nodeList = list.print();
+        ArrayList<Node> nodeList = list.getListOfNodes();
 
         System.out.println("Testing single insert. Should have one value." +
                 "\nValue found in list: ");
@@ -40,21 +40,15 @@ public class LinkedListTest {
         list.insert(4);
 
         assertEquals("Returned node list should have the expected values",
-                4, list.print().get(0).value);
+                4, list.getListOfNodes().get(0).value);
         assertEquals("Returned node list should have the expected values",
-                8, list.print().get(1).value);
+                8, list.getListOfNodes().get(1).value);
         assertEquals("Returned node list should have the expected values",
-                2, list.print().get(2).value);
+                2, list.getListOfNodes().get(2).value);
 
         //Leaving print in for now to make sure we don't have more values than were added
-        // goal is to eventually make a proper .equals override for comparing ArrayLists
-        ArrayList<Node> nodeList = list.print();
-
-        System.out.println("Testing Multiple inserts. Should have 3 values." +
-                "\nValues found in list: ");
-        for(Node node : nodeList){
-            System.out.println(node.value);
-        }
+        // Goal is to eventually make a proper .equals override for comparing node ArrayLists
+        System.out.println(list.printValues());
 
     }
 

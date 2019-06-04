@@ -60,20 +60,38 @@ public class LinkedList {
 
 
     // Returns an arrayList of all the items in a list
-    public ArrayList<Node> print(){
+    public String printValues(){
+
+        StringBuilder linkedListStringBuilder = new StringBuilder();
+
+        Node currentNode = this.head;
+
+        if(this.head == null){
+            linkedListStringBuilder.append("List is empty. Head points to ");
+        }else {
+            linkedListStringBuilder.append("List contains the following values:\n");
+            while (currentNode != null){
+                linkedListStringBuilder.append(currentNode.value);
+                linkedListStringBuilder.append("->");
+                currentNode = currentNode.nextNode;
+            }
+        }
+        linkedListStringBuilder.append("null");
+        return linkedListStringBuilder.toString();
+
+    }
+
+
+    public ArrayList<Node> getListOfNodes(){
 
         ArrayList<Node> nodeArrayList = new ArrayList<>();
-
         Node next = this.head;
-
 
         while (next != null){
             nodeArrayList.add(next);
             next = next.nextNode;
         }
-
         return nodeArrayList;
-
     }
 
 
