@@ -1,6 +1,7 @@
 package linkedList;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Node {
 
@@ -17,16 +18,27 @@ public class Node {
         this.nextNode = nextNode;
     }
 
-    //TODO: override array list equals for proper comparison
-//    @Override
-////    public boolean equals (Node thatNode){
-////
-////        if(this.value == thatNode.value){
-////            return true;
-////        }else {
-////            return false;
-////        }
-////    }
+    //Used this to figure out how to override equals so I can compare two lists of nodes
+    // https://www.geeksforgeeks.org/overriding-equals-method-in-java/
+    @Override
+    public boolean equals (Object o){
+
+        if(o == this){
+            return true;
+        }
+
+        if(!(o instanceof Node)){
+            return  false;
+        }
+
+        Node thatNode = (Node) o;
+
+        if(this.value == thatNode.value && (Objects.equals(this.nextNode, thatNode.nextNode))){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 
 }

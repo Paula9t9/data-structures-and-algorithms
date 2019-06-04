@@ -52,6 +52,7 @@ public class LinkedList {
                     insert(valueToInsert, currentNode.nextNode, currentNode);
                     break;
                 }
+                currentNode = currentNode.nextNode;
             }
         }else {
             insert(valueToInsert);

@@ -48,6 +48,7 @@ public class LinkedListTest {
 
         //Leaving print in for now to make sure we don't have more values than were added
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists
+        System.out.println("Testing Multiple inserts. Should have 3 values.");
         System.out.println(list.printValues());
 
     }
@@ -92,7 +93,32 @@ public class LinkedListTest {
     }
 
 
+    @Test
+    public void testInsertBefore(){
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
 
+        int valueToFind = 8;
+        int valueToInsert = 4;
+
+        testList.insertBefore(valueToFind, valueToInsert);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(7);
+        expectedList.insert(8);
+        expectedList.insert(4);
+        expectedList.insert(2);
+        expectedList.insert(3);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+
+        assertEquals("Lists should be the same", expectedResult, actualResult);
+
+    }
 
 }
 
