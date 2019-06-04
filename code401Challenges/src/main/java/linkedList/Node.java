@@ -40,5 +40,16 @@ public class Node {
         }
     }
 
+    @Override
+    public String toString(){
+
+        if(this.nextNode == null){
+            return String.format("\nThis node has the value: %d, and points to node w/ value: %s", this.value,
+                    "null");
+        }
+            return String.format("\nThis node has the value: %d, and points to node w/ value: %d", this.value,
+                this.nextNode.value);
+        }
+
 
 }

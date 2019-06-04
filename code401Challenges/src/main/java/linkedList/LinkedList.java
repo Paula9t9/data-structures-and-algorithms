@@ -74,7 +74,25 @@ public class LinkedList {
     }
 
 
+    // finds the first occurrence of a value in the list and inserts the new value after that value
+    // if value not found, insert at the end of the list
+    public void insertAfter(int valueToFind, int valueToInsert){
 
+        if (this.includes(valueToFind)){
+            //iterate through list to find value, then insert new value
+            Node currentNode = this.head;
+
+            while (currentNode != null) {
+                if(currentNode.value == valueToFind){
+                    insert(valueToFind, currentNode.nextNode, currentNode);
+                    break;
+                }
+                currentNode = currentNode.nextNode;
+            }
+        } else{
+            append(valueToInsert);
+        }
+    }
 
     // Returns an arrayList of all the items in a list
     public String printValues(){
