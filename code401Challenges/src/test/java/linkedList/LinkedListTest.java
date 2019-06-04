@@ -120,6 +120,31 @@ public class LinkedListTest {
 
     }
 
+
+    @Test
+    public void testAppend() {
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        int valueToInsert = 5;
+        testList.append(valueToInsert);
+
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(5);
+        expectedList.insert(7);
+        expectedList.insert(8);
+        expectedList.insert(2);
+        expectedList.insert(3);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+
+        assertEquals("Lists should be the same. ", expectedResult, actualResult);
+    }
 }
 
 

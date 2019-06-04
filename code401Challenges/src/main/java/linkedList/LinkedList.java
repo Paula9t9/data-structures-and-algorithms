@@ -39,6 +39,20 @@ public class LinkedList {
     }
 
 
+    // Adds a value to the end of the list
+    public void append(int value){
+
+        Node currentNode = this.head;
+        while(currentNode != null){
+            if(currentNode.nextNode == null){
+                insert(value, null, currentNode);
+                break;
+            }
+            currentNode = currentNode.nextNode;
+        }
+    }
+
+
     // finds first occurrence of a value in the list and inserts the new value before that value
     // if value not found, insert at the front of the list
     public void insertBefore(int valueToFind, int valueToInsert){
@@ -58,6 +72,8 @@ public class LinkedList {
             insert(valueToInsert);
         }
     }
+
+
 
 
     // Returns an arrayList of all the items in a list
@@ -109,7 +125,6 @@ public class LinkedList {
             }
             next = next.nextNode;
         }
-
         return found;
     }
 
