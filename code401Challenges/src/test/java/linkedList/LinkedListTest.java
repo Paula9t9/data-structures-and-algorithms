@@ -146,6 +146,8 @@ public class LinkedListTest {
         assertEquals("Lists should be the same. ", expectedResult, actualResult);
     }
 
+    //TODO: test append on an empty list
+
 
     @Test
     public void testInsertAfter(){
