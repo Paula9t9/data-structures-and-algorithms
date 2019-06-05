@@ -50,13 +50,11 @@ public class LinkedListTest {
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists
         System.out.println("Testing Multiple inserts. Should have 3 values.");
         System.out.println(list.printValues());
-
     }
 
 
     @Test
     public void testIncludes_basic(){
-
         LinkedList testList = new LinkedList();
         testList.insert(7);
         testList.insert(8);
@@ -65,21 +63,18 @@ public class LinkedListTest {
 
         assertTrue("Should return true when the item is in the list", testList.includes(7));
         assertFalse("Should return false when the value is not in the list", testList.includes(4));
-
     }
 
 
 
     @Test
     public void testEmptyList(){
-
         LinkedList testList = new LinkedList();
         assertEquals("List should instantiate as empty", null, testList.head);
     }
 
     @Test
     public void testHead(){
-
         LinkedList testList = new LinkedList();
         testList.insert(7);
         testList.insert(8);
