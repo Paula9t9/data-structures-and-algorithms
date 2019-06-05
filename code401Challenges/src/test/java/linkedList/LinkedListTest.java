@@ -15,11 +15,11 @@ public class LinkedListTest {
         list.insert(2);
 
         assertEquals("Returned node list should have the expected nodes",
-                2, list.print().get(0).value);
+                2, list.getListOfNodes().get(0).value);
 
         //Leaving print in for now to make sure we don't have more values than were added
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists
-        ArrayList<Node> nodeList = list.print();
+        ArrayList<Node> nodeList = list.getListOfNodes();
 
         System.out.println("Testing single insert. Should have one value." +
                 "\nValue found in list: ");
@@ -40,28 +40,21 @@ public class LinkedListTest {
         list.insert(4);
 
         assertEquals("Returned node list should have the expected values",
-                4, list.print().get(0).value);
+                4, list.getListOfNodes().get(0).value);
         assertEquals("Returned node list should have the expected values",
-                8, list.print().get(1).value);
+                8, list.getListOfNodes().get(1).value);
         assertEquals("Returned node list should have the expected values",
-                2, list.print().get(2).value);
+                2, list.getListOfNodes().get(2).value);
 
         //Leaving print in for now to make sure we don't have more values than were added
-        // goal is to eventually make a proper .equals override for comparing ArrayLists
-        ArrayList<Node> nodeList = list.print();
-
-        System.out.println("Testing Multiple inserts. Should have 3 values." +
-                "\nValues found in list: ");
-        for(Node node : nodeList){
-            System.out.println(node.value);
-        }
-
+        // Goal is to eventually make a proper .equals override for comparing node ArrayLists
+        System.out.println("Testing Multiple inserts. Should have 3 values.");
+        System.out.println(list.printValues());
     }
 
 
     @Test
     public void testIncludes_basic(){
-
         LinkedList testList = new LinkedList();
         testList.insert(7);
         testList.insert(8);
@@ -70,21 +63,18 @@ public class LinkedListTest {
 
         assertTrue("Should return true when the item is in the list", testList.includes(7));
         assertFalse("Should return false when the value is not in the list", testList.includes(4));
-
     }
 
 
 
     @Test
     public void testEmptyList(){
-
         LinkedList testList = new LinkedList();
         assertEquals("List should instantiate as empty", null, testList.head);
     }
 
     @Test
     public void testHead(){
-
         LinkedList testList = new LinkedList();
         testList.insert(7);
         testList.insert(8);
@@ -98,8 +88,87 @@ public class LinkedListTest {
     }
 
 
+    @Test
+    public void testInsertBefore(){
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        int valueToFind = 8;
+        int valueToInsert = 4;
+
+        testList.insertBefore(valueToFind, valueToInsert);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(7);
+        expectedList.insert(8);
+        expectedList.insert(4);
+        expectedList.insert(2);
+        expectedList.insert(3);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+
+        assertEquals("Lists should be the same", expectedResult, actualResult);
+
+    }
 
 
+    @Test
+    public void testAppend() {
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        int valueToInsert = 5;
+        testList.append(valueToInsert);
+
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(5);
+        expectedList.insert(7);
+        expectedList.insert(8);
+        expectedList.insert(2);
+        expectedList.insert(3);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+
+        assertEquals("Lists should be the same. ", expectedResult, actualResult);
+    }
+
+    //TODO: test append on an empty list
+
+
+    @Test
+    public void testInsertAfter(){
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        int valueToFind = 8;
+        int valueToInsert = 4;
+
+        testList.insertAfter(valueToFind, valueToInsert);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(7);
+        expectedList.insert(4);
+        expectedList.insert(8);
+        expectedList.insert(2);
+        expectedList.insert(3);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+
+        assertEquals("Lists should be the same", expectedResult, actualResult);
+    }
 }
 
 
