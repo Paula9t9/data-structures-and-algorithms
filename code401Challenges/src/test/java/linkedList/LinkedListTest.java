@@ -180,6 +180,120 @@ public class LinkedListTest {
 
         assertEquals("Should find the value 2 spots from the end", 2, testList.findFromEnd(2));
     }
+
+
+    @Test
+    public void testMerge_basic(){
+        LinkedList testList = new LinkedList();
+        testList.insert(1);
+        testList.insert(2);
+        testList.insert(3);
+        testList.insert(4);
+
+        LinkedList testList2 = new LinkedList();
+        testList2.insert(5);
+        testList2.insert(6);
+        testList2.insert(7);
+        testList2.insert(8);
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(5);
+        expectedList.insert(1);
+        expectedList.insert(6);
+        expectedList.insert(2);
+        expectedList.insert(7);
+        expectedList.insert(3);
+        expectedList.insert(8);
+        expectedList.insert(4);
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+        testList = testList.merge(testList2);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        assertEquals("Should zip the two lists together", expectedResult, actualResult);
+    }
+
+
+    @Test
+    public void testMerge_list1Longer(){
+        LinkedList testList = new LinkedList();
+        testList.insert(9);
+        testList.insert(10);
+        testList.insert(11);
+        testList.insert(1);
+        testList.insert(2);
+        testList.insert(3);
+        testList.insert(4);
+
+
+        LinkedList testList2 = new LinkedList();
+        testList2.insert(5);
+        testList2.insert(6);
+        testList2.insert(7);
+        testList2.insert(8);
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(9);
+        expectedList.insert(10);
+        expectedList.insert(11);
+        expectedList.insert(5);
+        expectedList.insert(1);
+        expectedList.insert(6);
+        expectedList.insert(2);
+        expectedList.insert(7);
+        expectedList.insert(3);
+        expectedList.insert(8);
+        expectedList.insert(4);
+
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+        testList = testList.merge(testList2);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        assertEquals("Should zip the two lists together even if first list is longer",
+                expectedResult, actualResult);
+
+    }
+
+    @Test
+    public void testMerge_list2Longer(){
+        LinkedList testList = new LinkedList();
+        testList.insert(4);
+        testList.insert(3);
+        testList.insert(2);
+        testList.insert(1);
+
+
+        LinkedList testList2 = new LinkedList();
+        testList.insert(11);
+        testList.insert(10);
+        testList.insert(9);
+        testList2.insert(8);
+        testList2.insert(7);
+        testList2.insert(6);
+        testList2.insert(5);
+
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(4);
+        expectedList.insert(3);
+        expectedList.insert(2);
+        expectedList.insert(8);
+        expectedList.insert(1);
+        expectedList.insert(7);
+        expectedList.insert(11);
+        expectedList.insert(6);
+        expectedList.insert(10);
+        expectedList.insert(5);
+        expectedList.insert(9);
+
+
+        ArrayList<Node> expectedResult = expectedList.getListOfNodes();
+        testList = testList.merge(testList2);
+        ArrayList<Node> actualResult = testList.getListOfNodes();
+
+        assertEquals("Should zip the two lists together even if second list is longer",
+                expectedResult, actualResult);
+    }
 }
 
 

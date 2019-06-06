@@ -169,4 +169,36 @@ public class LinkedList {
         }
     }
 
+
+    //Merges two Linked Lists into one Linked List
+    public LinkedList merge( LinkedList list2){
+
+        Node list1CurrentNode = this.head;
+        Node list2CurrentNode = list2.head;
+        Node tempNode1;
+        Node tempNode2;
+
+        while(list1CurrentNode != null && list2CurrentNode != null){
+
+            tempNode1 = list1CurrentNode.nextNode;
+            tempNode2 = list2CurrentNode.nextNode;
+
+            list1CurrentNode.nextNode = list2CurrentNode;
+            list2CurrentNode.nextNode = tempNode1;
+
+            list1CurrentNode = tempNode1;
+            list2CurrentNode = tempNode2;
+
+        }
+
+        if (list1CurrentNode == null){
+            list1CurrentNode = list2CurrentNode;
+        } else if (list1CurrentNode != null){
+            list2CurrentNode = list1CurrentNode;
+        }
+
+
+        return this;
+    }
+
 }
