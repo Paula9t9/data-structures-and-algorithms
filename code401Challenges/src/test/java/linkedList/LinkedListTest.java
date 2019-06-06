@@ -169,6 +169,17 @@ public class LinkedListTest {
 
         assertEquals("Lists should be the same", expectedResult, actualResult);
     }
+
+    @Test
+    public void testFindFromEnd_basicTest(){
+        LinkedList testList = new LinkedList();
+        testList.insert(7);
+        testList.insert(8);
+        testList.insert(2);
+        testList.insert(3);
+
+        assertEquals("Should find the value 2 spots from the end", 2, testList.findFromEnd(2));
+    }
 }
 
 

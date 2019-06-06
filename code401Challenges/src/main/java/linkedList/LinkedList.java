@@ -1,13 +1,15 @@
 package linkedList;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class LinkedList {
 
     // I used this as a reference to figure out how to get the next memory address in Java.
     // https://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
 
-    Node head = null;
+    linkedList.Node head = null;
+    private HashMap<Integer, Node> nodeMap;
 
 
     // inserts a new node at the front of the list
@@ -144,6 +146,27 @@ public class LinkedList {
             next = next.nextNode;
         }
         return found;
+    }
+
+    public int findFromEnd(int k){
+        buildHashMap();
+        return nodeMap.get(nodeMap.size() - k - 1).value;
+
+    }
+
+
+    //Stores the linked list nodes in a hashmap for easier lookup.
+    //starts counting at 0
+    private void buildHashMap(){
+        nodeMap = new HashMap<>();
+        Node currentNode = this.head;
+        int index = 0;
+
+        while(currentNode != null){
+            nodeMap.put(index, currentNode);
+            index ++;
+            currentNode = currentNode.nextNode;
+        }
     }
 
 }
