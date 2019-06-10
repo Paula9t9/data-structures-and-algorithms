@@ -41,8 +41,14 @@ public class Queue {
         return dequeuedValue;
     }
 
+    // Returns the value at the front of the list (does not remove it)
+    public int peek(){
+        return this.front.getValue();
+    }
+
     // Return all nodes in an array list
     public ArrayList<Node> getQueueNodes(){
         return internalList.getListOfNodes();
     }
+
 }
