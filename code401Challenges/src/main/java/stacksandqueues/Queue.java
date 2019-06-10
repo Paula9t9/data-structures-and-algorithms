@@ -26,11 +26,19 @@ public class Queue {
     public Node enqueue(int value){
         Node newNode = internalList.append(value);
         this.back = newNode;
+        // Initializes the front value if the list is empty
         if(this.front == null){
             this.front = newNode;
         }
-
         return newNode;
+    }
+
+    // Removes the first value in the list
+    public int dequeue(){
+        int dequeuedValue = front.getValue();
+        front = front.getNextNode();
+        internalList.setHead(front);
+        return dequeuedValue;
     }
 
     // Return all nodes in an array list

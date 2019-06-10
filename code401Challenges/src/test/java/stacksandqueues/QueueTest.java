@@ -37,8 +37,24 @@ public class QueueTest {
 
     @Test
     public void testEnqueue_basic() {
-        
+
         assertEquals("Should properly add items to the queue",
                 expectedList.getListOfNodes(), testQueue.getQueueNodes());
+    }
+
+    @Test
+    public void testDequeue_basic() {
+        //Re-initialize with one less value for test
+        expectedList = new LinkedList();
+        expectedList.insert(4);
+        expectedList.insert(3);
+        expectedList.insert(2);
+
+        int removedValue = testQueue.dequeue();
+
+        assertEquals("Should remove the correct value to the new node", 1,
+                removedValue);
+        assertEquals("Should remove the front item from the list", expectedList.getListOfNodes(),
+                testQueue.getQueueNodes());
     }
 }
