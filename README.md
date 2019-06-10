@@ -11,6 +11,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 6: Linked Lists Part 2](./challengeReadmes/linkedListsPt2.md)
 * [Challenge 7: Linked Lists - Working Backwards](./challengeReadmes/linkedListsBackwards.md)
 * [Challenge 8: Linked Lists - Merge](./challengeReadmes/linkedListsMerge.md)
+* [Challenge 10: Stacks and Queues](./challengeReadmes/stacksAndQueues.md)
 
 
 ## 301 Challenges
