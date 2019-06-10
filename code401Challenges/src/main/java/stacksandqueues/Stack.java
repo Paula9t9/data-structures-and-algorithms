@@ -32,6 +32,10 @@ public class Stack {
         return poppedValue;
     }
 
+    public int peek(){
+        return this.top.getValue();
+    }
+
     // Return all nodes in an array list
     public ArrayList<Node> getStackNodes(){
         return internalList.getListOfNodes();

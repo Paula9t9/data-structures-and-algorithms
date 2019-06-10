@@ -74,4 +74,13 @@ public class StackTest {
                 stackToTest.getStackNodes());
     }
 
+    @Test
+    public void testPeek(){
+
+        assertEquals("Should return the top value from the stack", 4, stackToTest.peek());
+        assertEquals("Should not remove value from the stack", expectedList.getListOfNodes(),
+                stackToTest.getStackNodes());
+
+    }
+
 }
