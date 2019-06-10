@@ -1,4 +1,4 @@
-package code401Challenges;
+package introChallenges;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

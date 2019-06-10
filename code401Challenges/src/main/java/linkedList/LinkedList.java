@@ -196,9 +196,12 @@ public class LinkedList {
         } else if (list1CurrentNode != null){
             list2CurrentNode = list1CurrentNode;
         }
-
-
         return this;
+    }
+
+
+    public Node getHead() {
+        return head;
     }
 
 }
