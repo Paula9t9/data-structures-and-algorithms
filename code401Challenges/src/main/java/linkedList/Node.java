@@ -52,4 +52,11 @@ public class Node {
         }
 
 
+    public Node getNextNode() {
+        return nextNode;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }

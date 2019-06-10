@@ -1,4 +1,4 @@
-package code401Challenges;
+package introChallenges;
 
 public class ArrayShift {
 
