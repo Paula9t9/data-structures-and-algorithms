@@ -83,4 +83,16 @@ public class StackTest {
 
     }
 
+    @Test
+    public void testEmptyStack(){
+        Stack emptyStack = new Stack();
+        ArrayList<Node> expectedEmpty = new ArrayList<>();
+        assertEquals("Should be able to initialize an empty Stack ",
+                expectedEmpty, emptyStack.getStackNodes());
+
+        emptyStack.push(8);
+        assertEquals("Should still be able to add values later",
+                8, emptyStack.peek());
+    }
+
 }
