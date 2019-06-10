@@ -51,5 +51,27 @@ public class StackTest {
                 stackToTest.getStackNodes());
     }
 
-    
+    @Test
+    public void testSinglePop() {
+        stackToTest.push(5);
+
+        assertEquals("Should return the most recently added value", 5, stackToTest.pop() );
+        assertEquals("Removed value should no longer be on the stack", expectedList.getListOfNodes(),
+                stackToTest.getStackNodes());
+    }
+
+    @Test
+    public void testMultiplePop(){
+        stackToTest.push(5);
+        stackToTest.push(6);
+        stackToTest.push(7);
+
+        assertEquals("Should return the most recently added value", 7, stackToTest.pop());
+        assertEquals("Should return the most recently added value", 6, stackToTest.pop());
+        assertEquals("Should return the most recently added value", 5, stackToTest.pop());
+
+        assertEquals("Removed values should no longer be on the stack", expectedList.getListOfNodes(),
+                stackToTest.getStackNodes());
+    }
+
 }

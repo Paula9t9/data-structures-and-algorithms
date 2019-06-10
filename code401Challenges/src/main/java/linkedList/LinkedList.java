@@ -13,16 +13,18 @@ public class LinkedList {
 
 
     // inserts a new node at the front of the list
-    public void insert(int value) {
+    public Node insert(int value) {
 
         //If no head, instantiate head and add first value
         //otherwise, add new value after existing head
         if (this.head == null){
             Node newNode = new Node(value);
             head = newNode;
+            return newNode;
         }else {
             Node newNode = new Node(value, head);
             head = newNode;
+            return newNode;
         }
     }
 
@@ -204,4 +206,7 @@ public class LinkedList {
         return head;
     }
 
+    public void setHead(Node head) {
+        this.head = head;
+    }
 }

@@ -21,10 +21,18 @@ public class Stack {
     }
 
     public void push(int value){
-        internalList.insert(value);
-        this.top = internalList.getHead();
+        Node newNode = internalList.insert(value);
+        this.top = newNode;
     }
 
+    public int pop(){
+        int poppedValue = this.top.getValue();
+        this.top = this.top.getNextNode();
+        internalList.setHead(this.top);
+        return poppedValue;
+    }
+
+    // Return all nodes in an array list
     public ArrayList<Node> getStackNodes(){
         return internalList.getListOfNodes();
     }
