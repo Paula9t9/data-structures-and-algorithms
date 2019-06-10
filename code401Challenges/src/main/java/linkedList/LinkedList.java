@@ -12,7 +12,7 @@ public class LinkedList {
     private HashMap<Integer, Node> nodeMap;
 
 
-    // inserts a new node at the front of the list
+    // inserts a new node at the front of the list, returns inserted node for reference
     public Node insert(int value) {
 
         //If no head, instantiate head and add first value
@@ -29,31 +29,42 @@ public class LinkedList {
     }
 
     // inserts a new node between the prevNode and the nextNode.
-    public void insert(int value, Node nextNode, Node prevNode) {
+    public Node insert(int value, Node nextNode, Node prevNode) {
 
         //if nextNode is null, add to the end of the list
         if(nextNode == null){
             Node newNode = new Node(value);
             prevNode.nextNode = newNode;
+            return newNode;
         }else {
             Node newNode = new Node(value, nextNode);
             prevNode.nextNode = newNode;
+            return newNode;
         }
 
     }
 
 
-    // Adds a value to the end of the list
-    public void append(int value){
+    // Adds a value to the end of the list, returns appended node for reference
+    // Returns null if it fails
+    public Node append(int value){
+        Node newNode = null;
 
-        Node currentNode = this.head;
-        while(currentNode != null){
-            if(currentNode.nextNode == null){
-                insert(value, null, currentNode);
-                break;
+        // If list is currently empty, just add to the list
+        if(this.head == null){
+            newNode = insert(value);
+        } else {
+            Node currentNode = this.head;
+            while(currentNode != null){
+                if(currentNode.nextNode == null){
+                    newNode = insert(value, null, currentNode);
+                    break;
+                }
+                currentNode = currentNode.nextNode;
             }
-            currentNode = currentNode.nextNode;
         }
+
+        return newNode;
     }
 
 

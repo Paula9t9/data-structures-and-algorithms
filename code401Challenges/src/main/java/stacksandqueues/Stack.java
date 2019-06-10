@@ -11,9 +11,9 @@ public class Stack {
     LinkedList internalList = new LinkedList();
 
 
-    public Stack(linkedList.Node top) {
-        this.top = top;
-        internalList.insert(this.top.getValue());
+    public Stack(int firstValue) {
+        //push will initialize top for us
+        push(firstValue);
     }
 
     public Stack() {
@@ -40,4 +40,6 @@ public class Stack {
     public ArrayList<Node> getStackNodes(){
         return internalList.getListOfNodes();
     }
+
+
 }
