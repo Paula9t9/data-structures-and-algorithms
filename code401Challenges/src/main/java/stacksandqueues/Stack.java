@@ -20,7 +20,7 @@ public class Stack {
         this.top = null;
     }
 
-    public push(int value){
+    public void push(int value){
         internalList.insert(value);
         this.top = internalList.getHead();
     }
