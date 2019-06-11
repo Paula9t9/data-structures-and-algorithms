@@ -1,4 +1,4 @@
-package stacksandqueues;
+package stacksAndQueues;
 
 import linkedList.LinkedList;
 import linkedList.Node;
