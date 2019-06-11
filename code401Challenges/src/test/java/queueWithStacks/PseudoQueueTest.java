@@ -34,7 +34,7 @@ public class PseudoQueueTest {
         assertEquals("Values should be properly added", expectedList.getListOfNodes(),
                 testQ.getPsuedoQueueNodes());
     }
-    
+
 
     @Test
     public void dequeue() {

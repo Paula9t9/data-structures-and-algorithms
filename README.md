@@ -16,6 +16,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 
 ## Week 3 Challenges
 * [Challenge 10: Stacks and Queues](./challengeReadmes/stacksAndQueues.md)
+* [Challenge 11: PseudoQueue](./challengeReadmes/pseudoQueue.md)
 
 
 ## 301 Challenges
