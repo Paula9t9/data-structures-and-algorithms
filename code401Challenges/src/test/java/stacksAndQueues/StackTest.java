@@ -1,4 +1,4 @@
-package stacksandqueues;
+package stacksAndQueues;
 
 import linkedList.LinkedList;
 import linkedList.Node;
@@ -93,6 +93,17 @@ public class StackTest {
         emptyStack.push(8);
         assertEquals("Should still be able to add values later",
                 8, emptyStack.peek());
+    }
+
+    @Test
+    public void testIsEmpty_basic(){
+        while (!stackToTest.isEmpty()){
+            stackToTest.pop();
+        }
+
+        ArrayList<Node> expectedEmpty = new ArrayList<>();
+        assertEquals("Stack should be empty after everything is removed ",
+                expectedEmpty, stackToTest.getStackNodes());
     }
 
 }

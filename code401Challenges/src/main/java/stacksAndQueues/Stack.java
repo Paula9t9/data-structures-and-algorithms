@@ -1,4 +1,4 @@
-package stacksandqueues;
+package stacksAndQueues;
 
 import linkedList.LinkedList;
 import linkedList.Node;
@@ -39,6 +39,14 @@ public class Stack {
     // Return all nodes in an array list
     public ArrayList<Node> getStackNodes(){
         return internalList.getListOfNodes();
+    }
+
+    public boolean isEmpty(){
+        if(this.top == null){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
