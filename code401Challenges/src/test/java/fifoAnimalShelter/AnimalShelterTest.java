@@ -23,6 +23,7 @@ public class AnimalShelterTest {
         testAnimalShelter.donate(new Dog("Little bit fluff", "black", 3));
         testAnimalShelter.donate(new Dog("Gruffy fluff", "brown", 7));
 
+        expectedAnimals = new ArrayList<>();
         expectedAnimals.add(new Cat("Super fluffy", "white", 2));
         expectedAnimals.add(new Dog("Pretty fluffy", "brown", 9));
         expectedAnimals.add(new Cat("Hairless", "skin", 10));

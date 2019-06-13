@@ -52,7 +52,7 @@ public class QueueTest {
         expectedList.insert(3);
         expectedList.insert(2);
 
-        int removedValue = testQueue.dequeue();
+        int removedValue = (int) testQueue.dequeue();
 
         assertEquals("Should remove the correct value to the new node", 1,
                 removedValue);

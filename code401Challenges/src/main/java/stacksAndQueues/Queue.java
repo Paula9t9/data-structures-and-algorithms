@@ -5,7 +5,7 @@ import linkedList.Node;
 
 import java.util.ArrayList;
 
-public class Queue {
+public class Queue<T> {
 
     private Node front;
     private Node back;
@@ -17,13 +17,13 @@ public class Queue {
 
     }
 
-    public Queue(int firstValue){
+    public Queue(T firstValue){
         //enqueue initializes front and back for us
         enqueue(firstValue);
     }
 
     //Adds a new node to the back of the list. Returns the node for reference
-    public Node enqueue(int value){
+    public Node enqueue(T value){
         Node newNode = internalList.append(value);
         this.back = newNode;
         // Initializes the front value if the list is empty
@@ -34,16 +34,16 @@ public class Queue {
     }
 
     // Removes the first value in the list
-    public int dequeue(){
-        int dequeuedValue = front.getValue();
+    public T dequeue(){
+        T dequeuedValue = (T) front.getValue();
         front = front.getNextNode();
         internalList.setHead(front);
         return dequeuedValue;
     }
 
     // Returns the value at the front of the list (does not remove it)
-    public int peek(){
-        return this.front.getValue();
+    public T peek(){
+        return (T) this.front.getValue();
     }
 
     // Return all nodes in an array list
