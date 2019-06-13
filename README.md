@@ -18,6 +18,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 10: Stacks and Queues](./challengeReadmes/stacksAndQueues.md)
 * [Challenge 11: PseudoQueue](./challengeReadmes/pseudoQueue.md)
 * [Challenge 12: Animal Shelter](./challengeReadmes/animalShelter.md)
+* [Challenge 13: Multi Bracket Validation](./challengeReadmes/multiBracketValidation.md)
 
 
 ## 301 Challenges
