@@ -5,7 +5,7 @@ import stacksAndQueues.Stack;
 
 import java.util.ArrayList;
 
-public class PseudoQueue {
+public class PseudoQueue<T> {
 
     Stack inputStack;
     Stack outputStack;
@@ -19,13 +19,13 @@ public class PseudoQueue {
         this.inputStack.push(value);
     }
 
-    public int dequeue(){
+    public T dequeue(){
 
         while(!inputStack.isEmpty()){
             outputStack.push(inputStack.pop());
         }
 
-        int valueToBeReturned = outputStack.pop();
+        T valueToBeReturned = (T) outputStack.pop();
 
         while(!outputStack.isEmpty()){
             inputStack.push(outputStack.pop());

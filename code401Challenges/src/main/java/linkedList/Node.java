@@ -3,17 +3,17 @@ package linkedList;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Node {
+public class Node<T> {
 
-    int value;
+    public T value;
     Node nextNode;
 
-    public  Node (int value){
+    public  Node (T value){
         this.value = value;
         this.nextNode = null;
     }
 
-    public Node (int value, Node nextNode){
+    public Node (T value, Node nextNode){
         this.value = value;
         this.nextNode = nextNode;
     }
@@ -56,7 +56,7 @@ public class Node {
         return nextNode;
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 }

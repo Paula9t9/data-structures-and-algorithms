@@ -1,8 +1,9 @@
 package fifoAnimalShelter;
 
+import stacksAndQueues.Queue;
+
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Queue;
 
 public class AnimalShelter {
 
@@ -13,29 +14,30 @@ public class AnimalShelter {
 
     public AnimalShelter(){
         this.catQueue = new Queue<>();
+        this.dogQueue = new Queue<>();
     }
 
     public void donate(Cat cat){
-        catQueue.add(cat);
+        catQueue.enqueue(cat);
     }
 
     public void donate(Dog dog){
-        dogQueue.add(dog);
+        dogQueue.enqueue(dog);
     }
-
-    public Cat adoptCat(){
-        return (Cat) catQueue.remove();
-    }
-
-    public Dog adoptDog(){
-        return (Dog) dogQueue.remove();
-    }
-
-    public Animal adoptAny(){
-        return new Cat("default", "default", 10);
-    }
-
-    public ArrayList<Animal> getResidents(){
-        return new ArrayList<>();
-    }
+//
+//    public Cat adoptCat(){
+//        return (Cat) catQueue.remove();
+//    }
+//
+//    public Dog adoptDog(){
+//        return (Dog) dogQueue.remove();
+//    }
+//
+//    public Animal adoptAny(){
+//        return new Cat("default", "default", 10);
+//    }
+//
+//    public ArrayList<Animal> getResidents(){
+//        return new ArrayList<>();
+//    }
 }

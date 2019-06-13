@@ -3,7 +3,7 @@ package linkedList;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class LinkedList {
+public class LinkedList<T> {
 
     // I used this as a reference to figure out how to get the next memory address in Java.
     // https://crunchify.com/how-to-implement-a-linkedlist-class-from-scratch-in-java/
@@ -13,7 +13,7 @@ public class LinkedList {
 
 
     // inserts a new node at the front of the list, returns inserted node for reference
-    public Node insert(int value) {
+    public Node insert(T value) {
 
         //If no head, instantiate head and add first value
         //otherwise, add new value after existing head
@@ -29,7 +29,7 @@ public class LinkedList {
     }
 
     // inserts a new node between the prevNode and the nextNode.
-    public Node insert(int value, Node nextNode, Node prevNode) {
+    public Node insert(T value, Node nextNode, Node prevNode) {
 
         //if nextNode is null, add to the end of the list
         if(nextNode == null){
@@ -47,7 +47,7 @@ public class LinkedList {
 
     // Adds a value to the end of the list, returns appended node for reference
     // Returns null if it fails
-    public Node append(int value){
+    public Node append(T value){
         Node newNode = null;
 
         // If list is currently empty, just add to the list
@@ -70,7 +70,7 @@ public class LinkedList {
 
     // finds first occurrence of a value in the list and inserts the new value before that value
     // if value not found, insert at the front of the list
-    public void insertBefore(int valueToFind, int valueToInsert){
+    public void insertBefore(T valueToFind, T valueToInsert){
 
         if(this.includes(valueToFind)){
 
@@ -91,7 +91,7 @@ public class LinkedList {
 
     // finds the first occurrence of a value in the list and inserts the new value after that value
     // if value not found, insert at the end of the list
-    public void insertAfter(int valueToFind, int valueToInsert){
+    public void insertAfter(T valueToFind, T valueToInsert){
 
         if (this.includes(valueToFind)){
             //iterate through list to find value, then insert new value
@@ -146,7 +146,7 @@ public class LinkedList {
 
 
     //Checks to see if a value is in the list
-    public boolean includes(int valueToFind){
+    public boolean includes(T valueToFind){
 
         boolean found = false;
         Node next = this.head;
@@ -161,9 +161,9 @@ public class LinkedList {
         return found;
     }
 
-    public int findFromEnd(int k){
+    public T findFromEnd(int k){
         buildHashMap();
-        return nodeMap.get(nodeMap.size() - k - 1).value;
+        return (T) nodeMap.get(nodeMap.size() - k - 1).value;
 
     }
 

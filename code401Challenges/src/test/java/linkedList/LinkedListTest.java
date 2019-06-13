@@ -14,8 +14,9 @@ public class LinkedListTest {
 
         list.insert(2);
 
+        Node testNode = (Node) list.getListOfNodes().get(0);
         assertEquals("Returned node list should have the expected nodes",
-                2, list.getListOfNodes().get(0).value);
+                2, testNode.value);
 
         //Leaving print in for now to make sure we don't have more values than were added
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists
@@ -39,12 +40,16 @@ public class LinkedListTest {
         list.insert(8);
         list.insert(4);
 
+        Node testNode = (Node) list.getListOfNodes().get(0);
+        Node testNode1 = (Node) list.getListOfNodes().get(1);
+        Node testNode2 = (Node) list.getListOfNodes().get(2);
+
         assertEquals("Returned node list should have the expected values",
-                4, list.getListOfNodes().get(0).value);
+                4, testNode.value);
         assertEquals("Returned node list should have the expected values",
-                8, list.getListOfNodes().get(1).value);
+                8, testNode1.value);
         assertEquals("Returned node list should have the expected values",
-                2, list.getListOfNodes().get(2).value);
+                2, testNode2.value);
 
         //Leaving print in for now to make sure we don't have more values than were added
         // Goal is to eventually make a proper .equals override for comparing node ArrayLists

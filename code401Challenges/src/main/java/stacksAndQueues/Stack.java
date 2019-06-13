@@ -5,13 +5,13 @@ import linkedList.Node;
 
 import java.util.ArrayList;
 
-public class Stack {
+public class Stack<T> {
 
     private Node top;
     LinkedList internalList = new LinkedList();
 
 
-    public Stack(int firstValue) {
+    public Stack(T firstValue) {
         //push will initialize top for us
         push(firstValue);
     }
@@ -20,20 +20,20 @@ public class Stack {
         this.top = null;
     }
 
-    public void push(int value){
+    public void push(T value){
         Node newNode = internalList.insert(value);
         this.top = newNode;
     }
 
-    public int pop(){
-        int poppedValue = this.top.getValue();
+    public T pop(){
+        T poppedValue = (T) this.top.getValue();
         this.top = this.top.getNextNode();
         internalList.setHead(this.top);
         return poppedValue;
     }
 
-    public int peek(){
-        return this.top.getValue();
+    public T peek(){
+        return (T) this.top.getValue();
     }
 
     // Return all nodes in an array list
