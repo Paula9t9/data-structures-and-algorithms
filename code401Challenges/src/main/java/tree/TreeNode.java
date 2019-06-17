@@ -46,4 +46,10 @@ public class TreeNode<T> {
     public void setRightChild(TreeNode rightChild) {
         this.rightChild = rightChild;
     }
+
+    @Override
+    public String toString() {
+        String nodeString = this.value.toString();
+        return nodeString;
+    }
 }
