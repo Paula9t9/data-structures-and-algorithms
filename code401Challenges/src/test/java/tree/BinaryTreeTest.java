@@ -14,8 +14,8 @@ public class BinaryTreeTest {
 
     @Before
     public void setUp() throws Exception {
-        BinaryTree testTree = new BinaryTree();
-        ArrayList<Integer> insertValues = new ArrayList();
+        testTree = new BinaryTree();
+        insertValues = new ArrayList();
         insertValues.add(1);
         insertValues.add(2);
         insertValues.add(3);
@@ -24,13 +24,11 @@ public class BinaryTreeTest {
 
         testTree.addValues(insertValues);
     }
-
-
-
+    
 
     @Test
     public void testToString(){
-        assertEquals("Should print the values in the tree", "This tree contains the values: 12345",
+        assertEquals("Should print the values in the tree", "This tree contains the values: 54321",
                 testTree.toString());
     }
 
