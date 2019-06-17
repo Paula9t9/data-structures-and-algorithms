@@ -20,6 +20,9 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 12: Animal Shelter](./challengeReadmes/animalShelter.md)
 * [Challenge 13: Multi Bracket Validation](./challengeReadmes/multiBracketValidation.md)
 
+## Week 4 Challenges
+* [Challenge 15: Trees](./challengeReadmes/trees.md)
+
 
 ## 301 Challenges
 * [Inside their directories](./code-challenges)

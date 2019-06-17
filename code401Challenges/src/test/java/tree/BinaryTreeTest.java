@@ -24,10 +24,11 @@ public class BinaryTreeTest {
 
         testTree.addValues(insertValues);
     }
-    
+
 
     @Test
     public void testToString(){
+        // currently ToString's from the bottom up
         assertEquals("Should print the values in the tree", "This tree contains the values: 54321",
                 testTree.toString());
     }
