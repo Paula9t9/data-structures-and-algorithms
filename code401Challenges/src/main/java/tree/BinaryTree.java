@@ -33,6 +33,13 @@ public class BinaryTree<T extends Comparable<T>> {
 
     // Finds where in the tree we want to add the value, and then inserts that value by calling addNode
     public void addSingleValue(T value){
+
+        // if the root is null, create a new node with that value and be done
+        if (this.root == null){
+            this.root = new TreeNode(value);
+            return;
+        }
+
         TreeNode insertParent = findParentForInsert(this.root, value);
 
         // TODO: find a way for findParent to tell us node and left/right status for insert
@@ -62,7 +69,7 @@ public class BinaryTree<T extends Comparable<T>> {
             if(currentNode.getLeftChild() == null){
                 return currentNode;
             }else {
-                return findParentForInsert(currentNode, valueToAdd);
+                return findParentForInsert(currentNode.getLeftChild(), valueToAdd);
             }
             // If the value to be inserted is less than the current value, we want to insert to the right.
             // check per same logic as above
@@ -70,7 +77,7 @@ public class BinaryTree<T extends Comparable<T>> {
             if(currentNode.getRightChild() == null){
                 return currentNode;
             } else {
-                return findParentForInsert(currentNode, valueToAdd);
+                return findParentForInsert(currentNode.getRightChild(), valueToAdd);
             }
         } else {
             System.err.println("Oops, there was an issue finding the correct node. Returning the node provided");
@@ -83,7 +90,9 @@ public class BinaryTree<T extends Comparable<T>> {
     // TODO: refactor to return true if successful
     // adds multiple values to the tree
     public void addValues(ArrayList<T> valueList){
-
+        for (T value : valueList){
+            this.addSingleValue(value);
+        }
     }
 
 
@@ -112,7 +121,11 @@ public class BinaryTree<T extends Comparable<T>> {
     @Override
     public String toString() {
         // print the value of each node
-        StringBuilder stringBuilder = toStringHelper(this.root);
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("This tree contains the values: ");
+
+        stringBuilder.append(toStringHelper(this.root));
 
         return stringBuilder.toString();
 
