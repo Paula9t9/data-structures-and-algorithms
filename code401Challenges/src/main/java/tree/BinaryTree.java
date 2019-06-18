@@ -106,11 +106,11 @@ public class BinaryTree<T extends Comparable<T>> {
         valueList.add(currentNode.getValue());
 
         if(currentNode.getLeftChild() != null){
-            valueList.add(preOrderTraversal(currentNode.getLeftChild()));
+            valueList.addAll(preOrderTraversal(currentNode.getLeftChild()));
         }
 
         if(currentNode.getRightChild() != null){
-            valueList.add(preOrderTraversal(currentNode.getRightChild()));
+            valueList.addAll(preOrderTraversal(currentNode.getRightChild()));
         }
 
         return valueList;
@@ -148,5 +148,13 @@ public class BinaryTree<T extends Comparable<T>> {
         stringBuilder.append(currentNode.getValue().toString());
 
         return stringBuilder;
+    }
+
+    public TreeNode getRoot() {
+        return root;
+    }
+
+    public void setRoot(TreeNode root) {
+        this.root = root;
     }
 }
