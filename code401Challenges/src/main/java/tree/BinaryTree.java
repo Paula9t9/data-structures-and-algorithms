@@ -98,6 +98,22 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
 
+    public int findMaximumValue(TreeNode treeNode){
+        int temp;
+        if (treeNode.getLeftChild() != null){
+            temp = Math.max((int) treeNode.getValue(), findMaximumValue(treeNode.getLeftChild()));
+        }else {
+            temp = (int) treeNode.getValue();
+        }
+
+        if (treeNode.getRightChild() != null){
+            temp = Math.max(temp, findMaximumValue(treeNode.getRightChild()));
+        }
+
+        return temp;
+    }
+
+
     // Given a tree node, this traverses the tree by the left nodes first, storing all values in an array then
     // returning that array.
     public ArrayList<T> preOrderTraversal(TreeNode currentNode){
@@ -118,6 +134,7 @@ public class BinaryTree<T extends Comparable<T>> {
         return valueList;
 
     }
+
 
     // Traverse a tree breadth first. In other words, level by level.
     public String breadthFirstTraversal(){
