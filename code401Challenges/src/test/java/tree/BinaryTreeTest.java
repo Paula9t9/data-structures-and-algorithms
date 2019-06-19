@@ -46,8 +46,13 @@ public class BinaryTreeTest {
 
         assertEquals("Should traverse the tree starting with the left nodes", expectedArray,
                 actualArray);
+    }
 
+    @Test
+    public void testBreadthTraversal(){
 
+        assertEquals("Should traverse the tree breadth first. This particular tree is a BST, and stores values " +
+                "accordingly.", "42513", testTree.breadthFirstTraversal());
     }
 
 }
