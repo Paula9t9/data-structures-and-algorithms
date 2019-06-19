@@ -1,6 +1,8 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T extends Comparable<T>> {
     private TreeNode root;
@@ -115,6 +117,31 @@ public class BinaryTree<T extends Comparable<T>> {
 
         return valueList;
 
+    }
+
+    // Traverse a tree breadth first. In other words, level by level.
+    public String breadthFirstTraversal(){
+        Queue nodeQueue = new LinkedList();
+
+        StringBuilder resultString = new StringBuilder();
+
+        nodeQueue.add(this.root);
+        TreeNode currentNode;
+
+        while(!nodeQueue.isEmpty()){
+            currentNode =  (TreeNode) nodeQueue.remove();
+            resultString.append(currentNode.getValue());
+
+            if(currentNode.getLeftChild() != null){
+                nodeQueue.add(currentNode.getLeftChild());
+            }
+            if(currentNode.getRightChild() != null){
+                nodeQueue.add(currentNode.getRightChild());
+            }
+        }
+
+        System.out.println(resultString.toString());
+        return resultString.toString();
     }
 
 
