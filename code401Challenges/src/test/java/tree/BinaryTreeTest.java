@@ -55,4 +55,9 @@ public class BinaryTreeTest {
                 "accordingly.", "42513", testTree.breadthFirstTraversal());
     }
 
+    @Test
+    public void testFindMaxValue() {
+        assertEquals("Should return the largest value in the tree", 5,
+                testTree.findMaximumValue(testTree.getRoot()));
+    }
 }
