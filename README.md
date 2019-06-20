@@ -24,6 +24,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 15: Trees](./challengeReadmes/trees.md)
 * [Challenge 16: FizzBuzz Tree](./challengeReadmes/fizzBuzzTree.md)
 * [Challenge 17: Breadth First Traversal](./challengeReadmes/breadthTraversal.md)
+* [Challenge 18: Find Max Value](./challengeReadmes/findMaxValue.md)
 
 
 ## 301 Challenges
