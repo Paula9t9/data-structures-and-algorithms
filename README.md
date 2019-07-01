@@ -26,6 +26,9 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 17: Breadth First Traversal](./challengeReadmes/breadthTraversal.md)
 * [Challenge 18: Find Max Value](./challengeReadmes/findMaxValue.md)
 
+## Week 6 Challenges
+* [Challenge 26: Teach Insertion Sort](challengeReadmes/lectureNotes_insertionSort.md)
+
 
 ## 301 Challenges
 * [Inside their directories](./code-challenges)
