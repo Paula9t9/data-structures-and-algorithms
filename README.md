@@ -28,6 +28,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 
 ## Week 6 Challenges
 * [Challenge 26: Teach Insertion Sort](challengeReadmes/lectureNotes_insertionSort.md)
+* [Challenge 27: Teach Merge Sort](challengeReadmes/lectureNotes_mergeSort.md)
 
 
 ## 301 Challenges
