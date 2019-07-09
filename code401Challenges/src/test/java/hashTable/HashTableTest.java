@@ -11,7 +11,7 @@ public class HashTableTest {
 
     @Before
     public void setUp() throws Exception {
-        testTable = new HashTable();
+        testTable = new HashTable(16);
         testTable.add("Dominos", "Pizza");
     }
 
@@ -37,6 +37,6 @@ public class HashTableTest {
     @Test
     public void testHash() {
         assertEquals("Should return the correct index for the has function",
-                0, testTable.hash("ABC"));
+                10, testTable.hash("ABC"));
     }
 }
