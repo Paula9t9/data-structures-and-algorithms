@@ -30,6 +30,9 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 26: Teach Insertion Sort](challengeReadmes/lectureNotes_insertionSort.md)
 * [Challenge 27: Teach Merge Sort](challengeReadmes/lectureNotes_mergeSort.md)
 
+## Week 7 Challenges
+* [Hash Table Implementation](challengeReadmes/hashTables.md)
+
 
 ## 301 Challenges
 * [Inside their directories](./code-challenges)
