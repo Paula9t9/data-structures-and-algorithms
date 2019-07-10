@@ -15,10 +15,9 @@ public class RepeatedWord {
             // https://www.geeksforgeeks.org/removing-punctuations-given-string/
             word = word.replaceAll("\\p{Punct}","");
 
-            //lowercase the word
             word = word.toLowerCase();
 
-
+            //Check if we have encountered this word already, and proceed accordingly
             if (wordsSoFar.contains(word)){
                 return word;
             }else {
