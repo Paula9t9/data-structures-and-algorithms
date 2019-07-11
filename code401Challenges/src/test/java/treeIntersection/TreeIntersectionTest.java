@@ -49,4 +49,33 @@ public class TreeIntersectionTest {
         assertTrue("Should contain values found in both trees", expectedArray.equals(actualList));
 
     }
+
+    @Test
+    public void testTreeIntersection_noDuplicates() {
+
+        BinaryTree tree3 = new BinaryTree();
+        tree3.addSingleValue(1);
+        tree3.addSingleValue(888);
+        tree3.addSingleValue(777);
+        tree3.addSingleValue(44);
+        tree3.addSingleValue(66);
+        tree3.addSingleValue(55);
+
+        ArrayList expectedArray = new ArrayList();
+        ArrayList actualList = TreeIntersection.treeIntersection(tree3, tree);
+
+        assertTrue("Should not find any matches if there are none",
+                expectedArray.equals(actualList));
+
+    }
+
+    @Test
+    public void testTree_Empty() {
+
+        ArrayList expectedArray = new ArrayList();
+        BinaryTree emptyTree = new BinaryTree();
+
+        assertTrue("Should not find anything if only pass one actual list",
+                expectedArray.equals(TreeIntersection.treeIntersection(emptyTree, tree)));
+    }
 }

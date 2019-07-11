@@ -33,6 +33,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 ## Week 7 Challenges
 * [Hash Table Implementation](challengeReadmes/hashTables.md)
 * [Challenge 31: Find the Repeated Word](challengeReadmes/repeatedWord.md)
+* [Challenge 32: Tree Intersection](challengeReadmes/treeIntersection.md)
 
 
 ## 301 Challenges

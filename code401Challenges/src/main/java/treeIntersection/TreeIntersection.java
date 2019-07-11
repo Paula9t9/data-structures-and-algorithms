@@ -12,6 +12,10 @@ public class TreeIntersection {
 
         ArrayList<Integer> resultsList = new ArrayList<>();
 
+        if (tree1.getRoot()  == null || tree2.getRoot() == null){
+            return resultsList;
+        }
+
         //Store all nodes from first tree into list for comparison
         ArrayList<Integer> firstTreeList = tree1.preOrderTraversal(tree1.getRoot());
 
