@@ -2,12 +2,17 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
-public class Graph {
+public class Graph<T> {
 
-    HashMap<GraphNode, ArrayList> adjacencyList;
+    //Just need to track the nodes. Nodes will track their own edges
+    HashSet<GraphNode> adjacencyList;
 
-    public void addNode(){};
+    public GraphNode addNode(T value){
+        GraphNode newNode = new GraphNode(value);
+        return newNode;
+    }
 
     public void addEdge(){};
 
