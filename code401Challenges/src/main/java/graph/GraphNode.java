@@ -9,9 +9,11 @@ public class GraphNode<T> {
 
     public GraphNode(T value) {
         this.value = value;
+        this.edges = new ArrayList<>();
     }
 
     public GraphNode() {
+        this.edges = new ArrayList<>();
     }
 
     public T getValue() {
@@ -28,5 +30,13 @@ public class GraphNode<T> {
 
     public void setEdges(ArrayList<Edge> edges) {
         this.edges = edges;
+    }
+
+    public void addEdge(Edge newEdge){
+        this.edges.add(newEdge);
+    }
+
+    public void removeEdge(Edge badEdge){
+        this.edges.remove(badEdge);
     }
 }

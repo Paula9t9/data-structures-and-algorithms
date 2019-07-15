@@ -7,13 +7,16 @@ import static org.junit.Assert.*;
 
 public class GraphTest {
 
-    GraphNode testNode;
     Graph testGraph;
+    GraphNode testNode;
+    GraphNode bTestNode;
+
 
     @Before
     public void setUp() throws Exception {
         testGraph = new Graph();
         testNode = new GraphNode("A");
+        bTestNode = new GraphNode("B");
     }
 
     @Test
@@ -23,6 +26,25 @@ public class GraphTest {
         GraphNode newNode = testGraph.addNode("A");
 
         assertEquals("Values should match", testNode.getValue(), newNode.getValue());
+    }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAddEdge_fail() {
+        testGraph.addEdge(testNode, bTestNode, 1);
+    }
+
+    @Test
+    public void testAddEdge_basic() {
+        testNode = testGraph.addNode("A");
+        bTestNode =  testGraph.addNode("B");
+
+        Edge actualEdge = testGraph.addEdge(testNode, bTestNode, 1);
+        Edge expectedEdge = new Edge(testNode, bTestNode, 1);
+
+        assertArrayEquals("Edges should know their nodes", expectedEdge.getNodes(), actualEdge.getNodes());
+
+
     }
 
     @Test
