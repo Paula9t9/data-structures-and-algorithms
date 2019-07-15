@@ -56,4 +56,38 @@ public class LeftJoinTest {
         assertArrayEquals("Should join keys into left map", expectedList.toArray(), resultList.toArray());
 
     }
+
+    @Test
+    public void testLeftJoin_EmptyRight() {
+
+        ArrayList resultList = LeftJoin.leftJoin(leftInput, emptyMap);
+
+        expectedList = new ArrayList();
+
+        String[] rowOne = {"fond", "enamored", null};
+        String[] rowTwo = {"wrath", "anger", null};
+        String[] rowThree = {"outfit", "garb", null};
+
+        expectedList.add(rowThree);
+        expectedList.add(rowTwo);
+        expectedList.add(rowOne);
+
+        assertArrayEquals("Should join keys into left map", expectedList.toArray(), resultList.toArray());
+
+
+    }
+
+    @Test
+    public void testLeftJoin_EmptyLeft() {
+
+        ArrayList resultList = LeftJoin.leftJoin(emptyMap, rightInput);
+
+        expectedList = new ArrayList();
+
+
+        assertArrayEquals("Should join keys into left map", expectedList.toArray(), resultList.toArray());
+
+
+    }
+
 }
