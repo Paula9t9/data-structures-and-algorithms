@@ -34,12 +34,22 @@ public class Graph<T> {
     }
 
 
-    public ArrayList getNodes(){
-        return new ArrayList();
+    public HashSet<GraphNode> getNodes(){
+        return this.nodes;
     }
 
-    public ArrayList getNeighbors(){
-        return new ArrayList();
+    public ArrayList getNeighbors(GraphNode node){
+        ArrayList<GraphNode> neighbors = new ArrayList<>();
+        for ( Object edge : node.getEdges()){
+            GraphNode[] nodes = ((Edge) edge).getNodes();
+            if(nodes[0] != node){
+                neighbors.add(nodes[0]);
+            } else if (nodes[1] != node){
+                neighbors.add(nodes[1]);
+            }
+        }
+
+        return neighbors;
     }
 
     public int size(){
