@@ -35,6 +35,9 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 31: Find the Repeated Word](challengeReadmes/repeatedWord.md)
 * [Challenge 32: Tree Intersection](challengeReadmes/treeIntersection.md)
 
+## Week 8 Challenges
+* [Challenge 33: Left Join Hashmaps](challengeReadmes/leftJoin.md)
+
 
 ## 301 Challenges
 * [Inside their directories](./code-challenges)
