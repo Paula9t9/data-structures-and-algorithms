@@ -3,6 +3,8 @@ package graph;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashSet;
+
 import static org.junit.Assert.*;
 
 public class GraphTest {
@@ -39,23 +41,53 @@ public class GraphTest {
         testNode = testGraph.addNode("A");
         bTestNode =  testGraph.addNode("B");
 
-        Edge actualEdge = testGraph.addEdge(testNode, bTestNode, 1);
-        Edge expectedEdge = new Edge(testNode, bTestNode, 1);
+        testGraph.addEdge(testNode, bTestNode, 1);
 
-        assertArrayEquals("Edges should know their nodes", expectedEdge.getNodes(), actualEdge.getNodes());
+        Edge actualEdge =  (Edge) testNode.getEdges().get(0);
+
+        Edge expectedEdge = new Edge(bTestNode);
+
+        //TODO: override equals methods for proper comparison
+        assertEquals("Edges should know their nodes", expectedEdge.getOtherNode().getValue(),
+                actualEdge.getOtherNode().getValue());
 
 
     }
 
     @Test
     public void getNodes() {
+        testNode =  testGraph.addNode("A");
+        bTestNode = testGraph.addNode("B");
+
+        GraphNode[] testArray = new GraphNode[]{testNode, bTestNode};
+
+        //TODO Override equals methods
+        assertArrayEquals("Should return an array of nodes", testArray, testGraph.getNodes().toArray());
     }
 
     @Test
     public void getNeighbors() {
+
+        testNode =  testGraph.addNode("A");
+        bTestNode = testGraph.addNode("B");
+        GraphNode cTestNode = testGraph.addNode("C");
+        GraphNode dTestNode = testGraph.addNode("D");
+
+        testGraph.addEdge(bTestNode, cTestNode, 1);
+        testGraph.addEdge(bTestNode, dTestNode, 2);
+
+        GraphNode[] testArray = new GraphNode[]{cTestNode, dTestNode};
+
+        //TODO Override equals methods
+        assertArrayEquals("Should return an array of nodes", testArray, bTestNode.getEdges().toArray());
     }
 
     @Test
     public void size() {
+        testNode =  testGraph.addNode("A");
+        bTestNode = testGraph.addNode("B");
+
+        assertEquals("Should return the size of the array", 2, testGraph.size());
+
     }
 }
