@@ -36,7 +36,7 @@ public class Graph<T> {
         return this.nodes;
     }
 
-    public ArrayList getNeighbors(GraphNode node){
+    public static ArrayList getNeighbors(GraphNode node){
         ArrayList<GraphNode> neighbors = new ArrayList<>();
         for ( Object edge : node.getEdges()) {
 
