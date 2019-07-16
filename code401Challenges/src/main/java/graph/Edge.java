@@ -2,26 +2,24 @@ package graph;
 
 public class Edge<T> {
 
-    private GraphNode[] nodes = new GraphNode[2];
+    private GraphNode otherNode;
     private T weight;
 
-    public Edge(GraphNode node1, GraphNode node2) {
-        GraphNode[] newArray = {node1, node2};
-        this.nodes = newArray;
+    public Edge(GraphNode otherNode) {
+        this.otherNode = otherNode;
     }
 
-    public Edge(GraphNode node1, GraphNode node2, T weight) {
-        GraphNode[] newArray = {node1, node2};
-        this.nodes = newArray;
+    public Edge(GraphNode otherNode, T weight) {
+        this.otherNode = otherNode;
         this.weight = weight;
     }
 
-    public GraphNode[] getNodes() {
-        return nodes;
+    public GraphNode getOtherNode() {
+        return otherNode;
     }
 
-    public void setNodes(GraphNode[] nodes) {
-        this.nodes = nodes;
+    public void setOtherNode(GraphNode otherNode) {
+        this.otherNode = otherNode;
     }
 
     public T getWeight() {
