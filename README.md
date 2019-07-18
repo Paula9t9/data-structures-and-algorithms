@@ -39,6 +39,7 @@ A place to work on coding challenges for Codefellows' 301 and 401 courses.
 * [Challenge 33: Left Join Hashmaps](challengeReadmes/leftJoin.md)
 * [Lab: Graphs](challengeReadmes/graphs.md)
 * [Challenge 36: Breadth First Graph Traversal](challengeReadmes/leftJoin.md)
+* [Challenge 38: Depth First Graph Traversal](challengeReadmes/depthFirst.md)
 
 
 ## 301 Challenges
